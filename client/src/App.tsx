@@ -1,34 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Button from "./components/Button"
+import ButtonStyle from "./components/ButtonStyle"
+import Card from "./components/Card"
+import Count from "./components/Count"
+import DataFetch from "./components/DataFetch"
+import Form from "./components/Form"
+import Handle from "./components/Handle"
+import Home from "./components/TodoApp/Home"
+import User from "./components/User"
 
-function App() {
-  const [count, setCount] = useState(0)
+const users = [
+  {
+    name: 'sinan',
+    age: 21,
+    address: 'Rangpur'
+  },
+  {
+    name: 'shakil',
+    age: 21,
+    address: 'Mithapukur'
+  }
+]
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      {/* <div>
+        <User users={users} />
+        <DataFetch status='succes' />
+        <Button>
+          hello
+        </Button>
+        <Card>
+          <h1>Post title is 1</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam neque iste, earum nemo error, praesentium architecto eos ex obcaecati quis, odio autem placeat vel dolore illo velit tempora ipsa animi.</p>
+        </Card>
+        <ButtonStyle style={{ color: 'red' }} />
+        <Count />
+        <Handle />
+
+        <Form />
+      </div> */}
+
+      <Home/>
+    </div>
   )
 }
 
